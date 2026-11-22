@@ -1,0 +1,11 @@
+node_modules/
+dist/
+build/
+installpark/
+*.zip
+*.sqlite
+*.sqlite-*
+workspace-backup*.json
+.env
+.env.*
+!.env.example
