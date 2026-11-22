@@ -1,10 +1,45 @@
 # 离线个人项目管理工作台
 
-中文 | [English](README.en.md)
+简体中文 · [English](README.en.md)
 
-面向单人、单机使用的桌面项目管理软件。把项目、任务和工作状态保存在本机，通过看板或列表整理工作，适合个人开发、学习计划和日常项目管理。
+一个面向单人、单机使用的桌面工作台。用看板或列表整理个人项目和任务，配置自己的工作流，数据保存在本机 SQLite。无需注册账号、配置服务器或填写 API 密钥。
 
-当前版本 **0.1.0**，提供 **Windows 11 x64 便携版**。无需注册账号、配置服务器或填写 API 密钥。
+**v0.1.0 · Windows 11 x64 便携版** · [下载 ZIP](https://github.com/xuzh0312/Local-offline-personal-project-management-workspace-similar-to-Plane/releases/download/v0.1.0/OfflineProjectWorkspace-0.1.0-Windows11-x64-portable.zip)
+
+> **一次开发流程实现** · **DSH 2.0.0 × GPT-6.2 Sol High** · **总耗费 421.6M Token** · **缓存命中率 98%**
+
+![项目看板截图，按待办、进行中、待验证和已完成四列展示示例任务](docs/media/project-board.png)
+
+## 我是怎么做出这个软件的
+
+我用自己在 Harness-AI-Lite 中提供的 **DSH 2.0.0**，搭配 **GPT-6.2 Sol（High 推理深度）**，在一轮开发流程中实现了这个软件。[Harness-AI-Lite](https://github.com/xuzh0312/Harness-AI-Lite)
+
+1. 我在项目介绍里只填了一句话：“这是一个电脑端离线个人项目管理工作台，类似Plane”
+2. 我给 agent 发的命令是“完成这个软件”。
+3. 之后我只回答 agent 的问题，大多数时候采纳它给出的推荐建议。
+
+## 界面演示
+
+以下截图和动图录自 Windows 便携版，使用示例项目数据。
+
+### 在看板上推进任务
+
+把「校对路线海拔数据」从「待办」拖到「进行中」，松手后即可更新任务状态。
+
+![看板动图，任务卡从待办拖到进行中](docs/media/board-drag.gif)
+
+### 从列表打开任务详情
+
+点击列表中的任务，侧边面板会显示状态、优先级、截止日期和描述，可直接编辑。
+
+![列表截图，右侧打开可编辑的任务详情面板](docs/media/list-detail.png)
+
+<details>
+<summary>观看详情面板打开与关闭的动图</summary>
+
+![任务详情动图，从列表打开侧边面板并返回列表](docs/media/list-detail.gif)
+
+</details>
 
 ## 功能介绍
 
@@ -25,8 +60,6 @@
 | 手动备份 | 导出所有项目、状态和任务（含归档），恢复到空工作区 |
 
 ## 下载与启动
-
-便携包：[OfflineProjectWorkspace-0.1.0-Windows11-x64-portable.zip](https://github.com/xuzh0312/Local-offline-personal-project-management-workspace-similar-to-Plane/releases/download/v0.1.0/OfflineProjectWorkspace-0.1.0-Windows11-x64-portable.zip)
 
 1. 将 ZIP **完整解压**到本地文件夹，不要在压缩包内直接运行。
 2. 保持 `Start.cmd`、`app/` 和 `electron/` 在同一解压目录中。
@@ -104,6 +137,7 @@
 
 ```text
 project/
+├── docs/media/     # 中英文文档使用的截图与动图
 ├── README.md       # 中文介绍
 ├── README.en.md    # 英文介绍
 ├── code/           # 软件源码与构建说明

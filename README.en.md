@@ -1,10 +1,45 @@
 # Offline Project Workspace
 
-[中文](README.md) | English
+[简体中文](README.md) · English
 
-A desktop project management application for one person on one computer. Keep projects, tasks, and workflow statuses locally, and organize work with a board or list. Suitable for personal development work, study plans, and everyday projects.
+A desktop workspace for managing personal projects on one computer. Organize tasks in a board or list, customize your workflow, and keep your data in a local SQLite database. Getting started requires no account, server configuration, or API key.
 
-Current version: **0.1.0**, available as a **Windows 11 x64 portable package**. No account, server configuration, or API key is required.
+**v0.1.0 · Windows 11 x64 portable** · [Download ZIP](https://github.com/xuzh0312/Local-offline-personal-project-management-workspace-similar-to-Plane/releases/download/v0.1.0/OfflineProjectWorkspace-0.1.0-Windows11-x64-portable.zip)
+
+> **Built in one development run** · **DSH 2.0.0 × GPT-6.2 Sol High** · **421.6M total tokens** · **98% cache hit rate**
+
+![Project board screenshot showing sample tasks in four workflow columns](docs/media/project-board.png)
+
+## How I built this app
+
+I built this app in one development run using **DSH 2.0.0** from my Harness-AI-Lite project and **GPT-6.2 Sol with High reasoning effort**. [Harness-AI-Lite](https://github.com/xuzh0312/Harness-AI-Lite)
+
+1. I entered one sentence in the project introduction: “This is an offline desktop workspace for personal project management, similar to Plane.”
+2. I told the agent: “Complete this app.”
+3. From there, I only answered the agent’s questions and usually went with its recommendations.
+
+## Interface demo
+
+The screenshots and recordings use the Windows portable build with sample project data.
+
+### Move tasks across the board
+
+Drag the route elevation review from To do to In progress. Dropping the card updates its status.
+
+![Animated demo of dragging a task from To do to In progress](docs/media/board-drag.gif)
+
+### Open task details from the list
+
+Select a task to edit its status, priority, due date, and description in the side panel.
+
+![Task list screenshot with an editable task detail panel open on the right](docs/media/list-detail.png)
+
+<details>
+<summary>Watch the task detail panel open and close</summary>
+
+![Animated demo of opening the task detail panel and returning to the list](docs/media/list-detail.gif)
+
+</details>
 
 ## Features
 
@@ -25,8 +60,6 @@ Current version: **0.1.0**, available as a **Windows 11 x64 portable package**. 
 | Manual backups | Export all projects, statuses, and tasks, including archived data; restore into an empty workspace |
 
 ## Download and launch
-
-Portable package: [OfflineProjectWorkspace-0.1.0-Windows11-x64-portable.zip](https://github.com/xuzh0312/Local-offline-personal-project-management-workspace-similar-to-Plane/releases/download/v0.1.0/OfflineProjectWorkspace-0.1.0-Windows11-x64-portable.zip)
 
 1. **Extract the entire ZIP** into a local folder. Do not run it inside the archive.
 2. Keep `Start.cmd`, `app/`, and `electron/` together in the extracted folder.
@@ -104,6 +137,7 @@ Built with **Electron + React + TypeScript + SQLite**. Electron provides desktop
 
 ```text
 project/
+├── docs/media/     # Screenshots and GIF demos shared by both READMEs
 ├── README.md       # Chinese introduction
 ├── README.en.md    # English introduction
 ├── code/           # Application source and build instructions
