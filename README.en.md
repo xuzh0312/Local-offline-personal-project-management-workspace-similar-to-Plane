@@ -2,9 +2,11 @@
 
 [简体中文](README.md) · English
 
-A desktop workspace for managing personal projects on one computer. Organize tasks in a board or list, customize your workflow, and keep your data in a local SQLite database. Getting started requires no account, server configuration, or API key.
+A Windows desktop tool for managing personal projects. Use it for a study plan, a side project, or everyday work: break projects into tasks, drag cards across a board as work progresses, or search, filter, and edit tasks in a list. Projects, tasks, and workflows stay in a local SQLite database. No account or server setup is required.
 
-**v0.1.0 · Windows 11 x64 portable** · [Download ZIP](https://github.com/xuzh0312/Local-offline-personal-project-management-workspace-similar-to-Plane/releases/download/v0.1.0/OfflineProjectWorkspace-0.1.0-Windows11-x64-portable.zip)
+**Published: v0.1.0 · Windows 11 x64 portable** · [Download ZIP](https://github.com/xuzh0312/Local-offline-personal-project-management-workspace-similar-to-Plane/releases/download/v0.1.0/OfflineProjectWorkspace-0.1.0-Windows11-x64-portable.zip)
+
+Extract the entire ZIP, then double-click `Start.cmd`. **The download above is the original public release and does not include permanent deletion.** Permanent deletion of archived items has been tested in a later build, but that source and portable ZIP have not been published to this repository.
 
 > **Built in one development run** · **DSH 2.0.0 × GPT-6.2 Sol High** · **421.6M total tokens** · **98% cache hit rate**
 
@@ -87,7 +89,9 @@ Drag cards between board columns or use the task actions menu to change status. 
 
 Switch between the board and list, search by title or number, and combine status and priority filters. Search covers task titles and numbers in the current project; it does not search description text or other projects.
 
-Restore archived tasks from “Archived tasks” within their project. Archiving a project hides it from the overview while retaining its tasks and statuses; restore it from “Archived projects.” Restore archived content before continuing to edit it. The current interface organizes projects and tasks through archiving and does not provide permanent project or task deletion.
+Restore archived tasks from “Archived tasks” within their project. Archiving a project hides it from the overview while retaining its tasks and statuses; restore it from “Archived projects.” To edit archived content again, restore it first.
+
+**Later build (not yet published):** Both archive views offer Delete next to Restore. Permanent deletion requires confirmation and cannot be undone. Deleting an archived project removes all its tasks (including unarchived ones) and statuses. Deleting an archived task removes only that task, and its number is not reused. Previously exported backups are unaffected.
 
 ### Change language and theme
 
@@ -121,7 +125,7 @@ Although its extension is `.json`, the current backup uses an application-specif
 4. Select “Settings → Backup and restore → Restore from backup” and choose the file.
 5. After restoration, open projects from the overview and select your language and theme again as needed.
 
-Restoration requires a workspace with **no projects at all, including archived projects**. Archiving all projects does not satisfy this requirement. Restore does not merge with or overwrite existing projects. The current interface also has no permanent project deletion option for clearing the workspace.
+Restoration requires a workspace with **no projects at all, including archived projects**. Archiving all projects does not satisfy this requirement, and restore does not merge with or overwrite existing projects. To keep the destination workspace's data, export its own backup first, then restore into an empty workspace.
 
 ## Local operation and current scope
 
